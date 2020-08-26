@@ -6,7 +6,7 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css'],
 })
 export class AppComponent {
-  title = 'users-list';
+  title = 'Users list';
   typesOfShoes: string[] = [
     'Stalker',
     'Boots',
