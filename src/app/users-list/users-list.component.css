@@ -1,0 +1,7 @@
+.item {
+  width: 190px;
+  display: inline-block;
+}
+.gray {
+  background-color: #eee;
+}
