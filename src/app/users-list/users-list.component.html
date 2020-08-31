@@ -1,7 +1,7 @@
 <div class="sortlist">
   <mat-form-field appearance="outline">
     <mat-label>Sorting Users</mat-label>
-    <mat-select>
+    <mat-select #list (selectionChange)="sort(list.value)">
       <mat-option [value]="0">Sort A-Z</mat-option>
       <mat-option [value]="1">Sort Z-A</mat-option>
     </mat-select>
@@ -9,7 +9,13 @@
 
   <mat-form-field appearance="outline">
     <mat-label>Search</mat-label>
-    <input matInput placeholder="Search user" />
+    <input
+      matInput
+      placeholder="Search user"
+      #inputSearch
+      (keyup.enter)="search(inputSearch.value)"
+    />
+    <mat-icon matSuffix (click)="search(inputSearch.value)">search</mat-icon>
   </mat-form-field>
 </div>
 
